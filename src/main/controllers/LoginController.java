@@ -44,19 +44,20 @@ public class LoginController {
     }
 
     private void showUserPanel() {
-        JOptionPane.showMessageDialog(null, "loged in as admin ");
+        JOptionPane.showMessageDialog(null, "loged in as user ");
     }
 
     private void showAdminPanel() {
         JOptionPane.showMessageDialog(null, "loged in as admin ");
     }
 
+    /** use  the provided  credentials to check if user exist in the database
+     * @Param userId refferes to the userId passed in the login screen
+     * @param password refferes to the password  passed in the login screen
+     * @return String  the usertype gotten from the database
+     **/
     private String verifyIncomingUser(String userId, String password) {
-        /** use  the provided  credentials to check if user exist in the database
-         * @Param userId refferes to the userId passed in the login screeen
-         * @param password refferes to the password  passed in the login screen
-         * @return the usertype gotten from the database
-         **/
+
 
         if(userId.equals("admin") && password.equals("123")) {
           usertype = "admin";
