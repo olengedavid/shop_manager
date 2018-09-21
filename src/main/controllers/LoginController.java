@@ -3,8 +3,7 @@ package main.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
-import main.models.User;
-import org.jetbrains.annotations.NotNull;
+
 
 import javax.swing.*;
 
