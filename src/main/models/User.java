@@ -5,7 +5,7 @@ public class User {
 
     private  String id;
     private String userName;
-    private String passwored;
+    private String password;
     private String Usertype;
 
     public User() {
@@ -14,7 +14,7 @@ public class User {
     public User(String id, String userName, String passwored, String usertype) {
         this.id = id;
         this.userName = userName;
-        this.passwored = passwored;
+        this.password = passwored;
         Usertype = usertype;
     }
 
@@ -35,11 +35,11 @@ public class User {
     }
 
     public String getPasswored() {
-        return passwored;
+        return password;
     }
 
     public void setPasswored(String passwored) {
-        this.passwored = passwored;
+        this.password = passwored;
     }
 
     public String getUsertype() {
