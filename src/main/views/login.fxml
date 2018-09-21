@@ -23,6 +23,5 @@
             </AnchorPane>
         </items>
       </SplitPane>
-      <Button layoutX="707.0" layoutY="2.0" mnemonicParsing="false" style="-fx-background-color: red;" text="x" />
    </children>
 </AnchorPane>
