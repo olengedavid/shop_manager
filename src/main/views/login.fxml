@@ -6,7 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="732.0" style="-fx-background-color: #ff4;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="732.0" style="-fx-background-color: #ff4;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controllers.LoginController">
    <children>
       <SplitPane dividerPositions="0.29797979797979796" layoutX="52.0" layoutY="31.0" prefHeight="383.0" prefWidth="622.0">
         <items>
@@ -18,7 +18,7 @@
                   <Label layoutX="119.0" layoutY="118.0" text="username" />
                   <Label layoutX="119.0" layoutY="174.0" text="password" />
                   <TextField fx:id="txtpassword" layoutX="221.0" layoutY="170.0" />
-                  <Button fx:id="btnlogin" layoutX="318.0" layoutY="242.0" mnemonicParsing="false" text="Login" />
+                  <Button fx:id="btnlogin" layoutX="318.0" layoutY="242.0" mnemonicParsing="false" onAction="#onLoginButtonClicked" text="Login" />
                </children>
             </AnchorPane>
         </items>
