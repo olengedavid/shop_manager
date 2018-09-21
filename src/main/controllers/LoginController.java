@@ -23,18 +23,51 @@ public class LoginController {
         String userId = txtusername.getText();
         String password = txtpassword.getText();
 
+        String  incomingUser = verifyIncomingUser(userId, password);
+        if(incomingUser.equals("admin") && password.equals("123")) {
 
-        //User incomingUser = verifyIncomingUser(userId, password);
+            showAdminPanel();
+
+        }else if (incomingUser.equals("normal") && password.equals("123")){
+
+          showUserPanel();
+        }else{
+
+            showError();
+
+        }
+
+    }
+
+    private void showError() {
+        JOptionPane.showMessageDialog(null, " user does not exist or wrong credentials ");
+    }
+
+    private void showUserPanel() {
+        JOptionPane.showMessageDialog(null, "loged in as admin ");
+    }
+
+    private void showAdminPanel() {
+        JOptionPane.showMessageDialog(null, "loged in as admin ");
+    }
+
+    private String verifyIncomingUser(String userId, String password) {
+        /** use  the provided  credentials to check if user exist in the database
+         * @Param userId refferes to the userId passed in the login screeen
+         * @param password refferes to the password  passed in the login screen
+         * @return the usertype gotten from the database
+         **/
+
         if(userId.equals("admin") && password.equals("123")) {
-            //redirect to  the  admin panel
-            JOptionPane.showMessageDialog(null, "loged in as admin ");
+          usertype = "admin";
         }else if (userId.equals("normal") && password.equals("123")){
 
             //redirect  to the  normal  user  panel
-            JOptionPane.showMessageDialog(null, "loged in as normal user ");
+          usertype = "normal";
         }else{
-            //show  error message on login  screen
-            JOptionPane.showMessageDialog(null, " user does not exist or wrong credentials ");
+            usertype=  "empty";
         }
+
+        return  usertype;
     }
 }
